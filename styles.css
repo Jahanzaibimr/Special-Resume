@@ -1,0 +1,184 @@
+/* Body */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e6f7ff, #ffffff); /* Light blue gradient */
+  background-attachment: fixed; /* Keeps the gradient static while scrolling */
+  color: #333;
+  animation: gradientShift 10s ease infinite; /* Added subtle animation */
+}
+
+/* Background Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
+  }
+  50% {
+    background: linear-gradient(135deg, #ffffff, #e6f7ff);
+  }
+  100% {
+    background: linear-gradient(135deg, #e6f7ff, #ffffff);
+  }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #0052cc, #00c6ff); /* Blue gradient */
+  color: white;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Shine Effect */
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(-45deg);
+  transition: 0.7s;
+}
+
+header:hover:before {
+  left: 150%;
+}
+
+/* Header Title */
+h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* 3D effect */
+}
+
+/* Paragraph Styling */
+p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  padding: 25px;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Shine Effect */
+section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: 0.7s;
+}
+
+section:hover:before {
+  left: 150%;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h2 {
+  color: #0052cc; /* Bright blue */
+  font-size: 1.8rem;
+  border-bottom: 3px solid #00c6ff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Light 3D effect */
+}
+
+h2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #00c6ff;
+  transition: width 0.4s ease;
+}
+
+h2:hover:before {
+  width: 100%;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #e6f7ff;
+  border-left: 4px solid #00c6ff;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #ccf2ff;
+  transform: translateX(10px);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #00c6ff, #0052cc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  section {
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
